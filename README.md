@@ -17,7 +17,7 @@ function setBackgroundColorHex(value) {
     app.backgroundColor = color;
 }
 ```
-- Set background color RGB version * （设置背景颜色 RGB 版）*
+- Set background color RGB version *（设置背景颜色 RGB 版）*
 ```JavaScript
 function setBackgroundColorRGB(r, g, b) {
     var c = new SolidColor;
