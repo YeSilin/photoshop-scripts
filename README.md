@@ -1,5 +1,8 @@
 ### Photoshop scripts collection
-- Select all layers *（选择全部图层）*
+
+
+
+#### Select all layers *（选择全部图层）*
 ```JavaScript
 function selectAllLayers() {
     var desc29 = new ActionDescriptor();
@@ -9,7 +12,7 @@ function selectAllLayers() {
     executeAction(stringIDToTypeID('selectAllLayers'), desc29, DialogModes.NO);
 }
 ```
-- Set background color hex version *（设置背景颜色 hex 版）*
+#### Set background color hex version *（设置背景颜色 hex 版）*
 ```JavaScript
 function setBackgroundColorHex(value) {
     var color = new SolidColor();
@@ -17,7 +20,7 @@ function setBackgroundColorHex(value) {
     app.backgroundColor = color;
 }
 ```
-- Set background color RGB version *（设置背景颜色 RGB 版）*
+#### Set background color RGB version *（设置背景颜色 RGB 版）*
 ```JavaScript
 function setBackgroundColorRGB(r, g, b) {
     var c = new SolidColor;
@@ -27,7 +30,7 @@ function setBackgroundColorRGB(r, g, b) {
     app.backgroundColor = c;
 }
 ```
-- Back to previous level history *（返回上一级历史）*
+#### Back to previous level history *（返回上一级历史）*
 ```JavaScript
 function returnPreviousHistory() {
     var idslct = charIDToTypeID("slct");
@@ -43,3 +46,5 @@ function returnPreviousHistory() {
 }
 ```
 
+#### Delete All DocumentAncestors Metadata *（删除全部元数据包括智能对象）*
+> Content is too long, saved in `deleteAllDocumentAncestorsMetadata.jsx` In file. 内容太长，已保存在 `deleteAllDocumentAncestorsMetadata.jsx` 文件中
