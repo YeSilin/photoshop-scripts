@@ -50,15 +50,26 @@ function openAllSmartObject(doc) {
                 continue;
             }
 
-            // 如果当前图层是智能对象
-            if (curLayer.kind == "LayerKind.SMARTOBJECT") {
+            // 如果当前图层是智能对象，并且名字不叫矢量智能对象
+            if (curLayer.kind == "LayerKind.SMARTOBJECT" && curLayer.name != "矢量智能对象") {
+
+
                 // 激活图层
                 app.activeDocument.activeLayer = curLayer;
 
                 // 打开之前先定义一下当前文档
                 var curDoc = app.activeDocument
+
+                // 先确认下当前打开了多少文档
+                var openDocCount = documents.length
+
                 // 打开智能对象
                 openSmartObject()
+
+                // 如果没有打开成功说明可能是矢量智能对象
+                if (openDocCount == documents.length) {
+                    continue
+                }
 
                 // 打开后追加保存到已打开的智能列表
                 openDocumentList.push(app.activeDocument)
